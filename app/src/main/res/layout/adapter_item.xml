@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/category_card"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:layout_margin="8dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/page_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            cardview:layout_constraintStart_toStartOf="parent"
+            cardview:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:background="@color/light_gray"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:id="@+id/arrow_img"
+            android:src="@drawable/ic_forward"
+            cardview:layout_constraintTop_toTopOf="parent"
+            cardview:layout_constraintBottom_toBottomOf="parent"
+            cardview:layout_constraintStart_toEndOf="@+id/page_btn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

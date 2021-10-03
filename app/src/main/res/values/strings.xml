@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">StickyHeader</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="name">Name: </string>
+    <string name="email">Email: </string>
+    <string name="phone">Phone: </string>
+    <string name="dob">Date of birth: </string>
+    <string name="fathers_name">Father\&#39;s Name</string>
+    <string name="address">Address</string>
+    <string name="heighest_education">Highest Education</string>
+    <string name="certification_1">Certification 1</string>
+    <string name="certification_2">Certification 2</string>
+    <string name="certification_3">Certification 3</string>
+    <string name="empty">"  "</string>
+    <string name="start_over">Start Over</string>
+    <string name="save_and_continue">Save and Continue</string>
+    <string name="network_connnectivity">Please check your network connectivity</string>
+    <string name="code_value">lD0jA3y8xhwYc1sJptLN3rFsF9H96xgLAG3URuVtmr80WWNbGKO4CQ==</string>
+    <string name="user_final_page_info">There are no pages to visit</string>
+    <string name="visited_page_text">Already you visited this page.</string>
+    <string name="next_page_text">Please select next page.</string>
+</resources>

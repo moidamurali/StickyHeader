@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/toolbar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/tool_bar_logo"
+        android:padding="@dimen/appbar_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressDialog"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.murali.test.stickyscroll.ui.CustomStickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_logo"
+        app:stickyHeader="@+id/pages_widget_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:visibility="gone">
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/name"
+                app:layout_constraintStart_toEndOf="@+id/dob"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/email"
+                app:layout_constraintStart_toEndOf="@+id/dob"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/phone"
+                app:layout_constraintStart_toEndOf="@+id/dob"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/dob"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+            <com.murali.test.widgets.CustomTextView
+                android:id="@+id/tv_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dob"
+                app:layout_constraintStart_toEndOf="@+id/dob"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+            <com.murali.test.widgets.PagesButtonWidget
+                android:id="@+id/pages_widget_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dob"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/view_height_60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pages_widget_view">
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_fathers_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/fathers_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tv_fathers_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_fathers_name" />
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="@string/address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_fathers_name" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_address" />
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_heighest_edu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/heighest_education"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_heighest_edu" />
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_certification_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/certification_1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_education" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_certification_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_certification_one" />
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_certification_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/certification_2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_certification_one" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_certification_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_certification_two" />
+
+                <com.murali.test.widgets.CustomTextView
+                    android:id="@+id/title_certification_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:text="@string/certification_3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_certification_two" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_certification_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/backgound"
+                    android:text="@string/empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_certification_three" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/btn_start_over"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:background="@drawable/blue_background"
+                    android:text="@string/start_over"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/et_certification_three" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_save_and_cotinue"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_height_40"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@drawable/full_blue_background"
+                    android:text="@string/save_and_continue"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintLeft_toRightOf="@+id/guideline"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_certification_three" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.murali.test.stickyscroll.ui.CustomStickyScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
